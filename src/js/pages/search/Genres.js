@@ -2,11 +2,10 @@ import React from 'react';
 import genres from '../../../json/genres.json';
 
 function Genre(props){
-  console.log(genres)
-
+  //console.log(genres)
   const genreList = genres.map(genre=>{
-    const link = "results/?genre=" + genre.name;
-    return (<a href={link} key={genre.name} ><div className="card genre">{genre.name}<br />{genre.count}</div></a>);
+    const link = "results/?genre=" + encodeURI(genre.name);
+    return (<a href={link} key={genre.name} title={genre.count}><div className="card genre">{genre.name}</div></a>);
   });
 
   return (

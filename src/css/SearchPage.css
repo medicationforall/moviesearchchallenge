@@ -22,3 +22,8 @@
   text-align:center;
   padding:5px;
 }
+
+.search.page .tags ul{
+  display:inline-block;
+  vertical-align: top;
+}
