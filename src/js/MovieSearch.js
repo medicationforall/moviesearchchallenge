@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/MovieSearch.css'
 import Header from './Header';
-import Search from './pages/Search';
+import Search from './pages/search/SearchPage';
 import Results from './pages/Results';
 import Detail from './pages/Detail';
 
