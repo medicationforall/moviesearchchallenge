@@ -1,20 +1,23 @@
 import React from 'react';
 import '../css/MovieSearch.css'
+import Header from './Header';
+import Search from './pages/Search';
+import Results from './pages/Results';
+import Detail from './pages/Detail';
 
 function MovieSearch(props){
+  const pages = {
+    'search':Search,
+    'results':Results,
+    'detail':Detail
+  }
+
+  const SelectedPage = pages['search']
+
+
   return (
     <div className="movieSearch">
-      <div class="search page">
-        <header>
-          <div className="logo">Movie Search Challenge</div>
-        </header>
-
-        <div className="pageWrapper">
-          <div className="content">
-            Hello World
-          </div>
-        </div>
-      </div>
+      <SelectedPage />
     </div>
   );
 }
