@@ -5,7 +5,7 @@ function Search(props){
   return (
     <div class="search page">
       <Header />
-      <div className="pageWrapper">
+      <div className="contentWrapper">
         <div className="content">
           Search Page
         </div>

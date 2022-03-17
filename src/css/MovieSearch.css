@@ -23,7 +23,7 @@ header .logo{
   font-size: 2rem;
 }
 
-.pageWrapper{
+.contentWrapper{
   height:calc(100% - 60px);
   overflow:auto;
 }

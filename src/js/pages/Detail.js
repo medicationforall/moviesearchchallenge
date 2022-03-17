@@ -5,7 +5,7 @@ function Detail(props){
   return (
     <div class="detail page">
       <Header />
-      <div className="pageWrapper">
+      <div className="contentWrapper">
         <div className="content">
           Details Page
         </div>

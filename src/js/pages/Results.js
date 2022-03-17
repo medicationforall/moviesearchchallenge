@@ -5,7 +5,7 @@ function Results(props){
   return (
     <div class="results page">
       <Header />
-      <div className="pageWrapper">
+      <div className="contentWrapper">
         <div className="content">
           Results page
         </div>
