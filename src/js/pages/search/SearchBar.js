@@ -18,6 +18,7 @@ function SearchBar(props){
             _searchClick(searchTerm, navigate);
           }
         }}
+        autoFocus
         >
       </input>
       <button className="primary" onClick={e=>_searchClick(searchTerm, navigate)}>Search</button>
