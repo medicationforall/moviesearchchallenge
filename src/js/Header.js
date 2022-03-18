@@ -4,9 +4,11 @@ import {Link} from "react-router-dom";
 function Header(props){
   return (
     <header>
-      <div className="logo"><a href="/">Movie Search Challenge</a></div>
+      <div className="logo">
+          <Link to="/">Movie Search Challenge</Link>
+      </div>
       <nav>
-        <Link to="/about">About</Link>
+        {props.children}
       </nav>
     </header>
   );

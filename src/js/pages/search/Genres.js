@@ -10,7 +10,7 @@ function Genre(props){
 
   return (
     <section className="genres">
-      <h2>Genres</h2>
+      <h2 id="genres">Genres</h2>
       {genreList}
     </section>
   );

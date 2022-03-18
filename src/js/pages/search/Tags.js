@@ -13,7 +13,7 @@ function Tags(props){
 
   return (
     <section className="tags">
-      <h2>Tags</h2>
+      <h2 id="tags">Tags</h2>
       <ul>
         {tagList.slice(0,20)}
       </ul>
