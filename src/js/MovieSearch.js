@@ -8,7 +8,7 @@ import {
 import '../css/MovieSearch.css'
 import Header from './Header';
 import Search from './pages/search/SearchPage';
-import Results from './pages/Results';
+import Results from './pages/results/Results';
 import Detail from './pages/Detail';
 import About from './pages/About';
 
