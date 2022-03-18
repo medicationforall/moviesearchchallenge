@@ -35,7 +35,7 @@ function _resolveMovies(movies){
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const genre = urlParams.get('genre')
-  console.log(genre);
+  const tags = urlParams.getAll('tag[]')
 
   let movieTitle = Object.keys(movies);
   movieTitle = movieTitle.sort();
@@ -45,6 +45,14 @@ function _resolveMovies(movies){
         let movie = movies[title];
         return movie.genres.includes(genre);
       });
+  }
+
+  if(tags.length > 0){
+    console.log('filter by tags', tags);
+    //movieTitle = movieTitle.filter(title=>{
+    //  let movie = movies[title];
+    //  return movie.genres.includes(genre);
+    //});
   }
 
   const movieArray = movieTitle.map(title=>{
