@@ -22,7 +22,7 @@ function MovieSearch(props){
           <Route path="detail" element={<Detail />} />
           <Route path="about" element={<About />} />
         </Routes>
-      </BrowserRouter>,
+      </BrowserRouter>
     </div>
   );
 }
