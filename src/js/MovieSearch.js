@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 
 import '../css/MovieSearch.css'
-import Header from './Header';
 import Search from './pages/search/SearchPage';
 import Results from './pages/results/Results';
 import Detail from './pages/detail/DetailPage';
