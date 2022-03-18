@@ -3,7 +3,7 @@ import Header from '../Header'
 
 function Results(props){
   return (
-    <div class="results page">
+    <div className="results page">
       <Header />
       <div className="contentWrapper">
         <div className="content">

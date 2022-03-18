@@ -1,17 +1,17 @@
 import React from 'react';
 import Header from '../Header'
 
-function Detail(props){
+function About(props){
   return (
-    <div className="detail page">
+    <div className="about page">
       <Header />
       <div className="contentWrapper">
         <div className="content">
-          Details Page
+          About Page
         </div>
       </div>
     </div>
   );
 }
 
-export default Detail;
+export default About;
