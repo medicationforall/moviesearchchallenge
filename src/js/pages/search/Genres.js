@@ -9,8 +9,8 @@ function Genre(props){
   });
 
   return (
-    <section className="genres">
-      <h2 id="genres">Genres</h2>
+    <section id="genres" className="genres">
+      <h2 >Genres</h2>
       {genreList}
     </section>
   );

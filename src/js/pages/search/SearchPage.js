@@ -12,7 +12,7 @@ function Search(props){
   return (
     <div className="search page">
       <Header>
-        <a href="#search">Search</a>
+        <a href="#searchBar">Search</a>
         <a href="#genres">Genres</a>
         <a href="#tags">Tags</a>
         <a href="#rating">Rating</a>

@@ -13,15 +13,15 @@
   min-height:100%;
 }
 
-.search.page .searchBar input{
+.search.page #searchBar input{
     font-size:1.5rem;
 }
 
-.search.page .searchBar button{
+.search.page #searchBar button{
   font-size:1.5rem;
 }
 
-.search.page .genres .genre.card{
+.search.page #genres .genre.card{
   display:inline-block;
   border:1px solid #000;
   margin:5px;
@@ -32,7 +32,7 @@
   padding:5px;
 }
 
-.search.page .tags ul{
+.search.page #tags ul{
   display:inline-block;
   vertical-align: top;
 }

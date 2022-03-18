@@ -21,7 +21,7 @@ function Results(props){
       <Header />
       <div className="contentWrapper">
         <div className="content">
-          Results page
+          Results
           <ul>
             {moviesList}
           </ul>

@@ -2,8 +2,8 @@ import React from 'react';
 
 function Rating(props){
   return (
-    <section className="rating">
-      <h2 id="rating">Rating</h2>
+    <section id="rating" className="rating">
+      <h2>Rating</h2>
     </section>
   );
 }

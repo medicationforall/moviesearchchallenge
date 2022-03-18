@@ -16,16 +16,36 @@ html, body, #root{
 
 header{
   background-color:var(--header-background, #fff);
-  height:70px;
+  height:114px;
 }
 
-header{
+header a{
+  color: var(--link-color, #000);
+  text-decoration:none;
+}
+
+header a:hover{
+  text-decoration:underline;
 }
 
 header .logo{
   font-size: 2rem;
   display:inline-block;
   margin-right:50px;
+}
+
+header .logo .title{
+  margin-left:-43px;
+}
+
+header svg{
+  height:113px;
+  width:113px;
+  vertical-align:bottom;
+}
+
+header svg{
+  fill: currentColor;
 }
 
 header nav{
@@ -37,7 +57,7 @@ header nav a{
 }
 
 .contentWrapper{
-  height:calc(100% - 70px);
+  height:calc(100% - 114px);
   overflow:auto;
 }
 

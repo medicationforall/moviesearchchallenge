@@ -5,8 +5,9 @@ function SearchBar(props){
   const [searchTerm, _setSearchTerm] = useState('');
   const navigate = useNavigate();
   return (
-    <section className="searchBar">
-      <h2 id="search">Search</h2>
+    <section id="searchBar">
+      <h2>Search</h2>
+      <div className="bar">
       <input
         type="text"
         value={searchTerm}
@@ -20,6 +21,7 @@ function SearchBar(props){
         >
       </input>
       <button className="primary" onClick={e=>_searchClick(searchTerm, navigate)}>Search</button>
+      </div>
     </section>
   );
 }
