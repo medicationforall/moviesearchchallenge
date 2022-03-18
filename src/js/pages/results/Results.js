@@ -36,6 +36,7 @@ function _resolveMovies(movies){
   const urlParams = new URLSearchParams(queryString);
   const genre = urlParams.get('genre')
   const tags = urlParams.getAll('tag[]')
+  const search = urlParams.get('search')
 
   let movieTitle = Object.keys(movies);
   movieTitle = movieTitle.sort();
@@ -53,6 +54,12 @@ function _resolveMovies(movies){
     //  let movie = movies[title];
     //  return movie.genres.includes(genre);
     //});
+  }
+
+  if(search){
+    movieTitle = movieTitle.filter(title=>{
+      return title.toLowerCase().includes(search.toLowerCase());
+    });
   }
 
   const movieArray = movieTitle.map(title=>{

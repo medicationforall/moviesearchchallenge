@@ -44,3 +44,7 @@ header nav a{
 .content{
   height:100%;
 }
+
+.primary{
+  background-color:var(--primary-background-color, #aed581)
+}
