@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../Header'
 import movies from '../../../json/movies.json';
+import { Link } from 'react-router-dom';
 
 function Results(props){
   let movieResults = _resolveMovies(movies);
@@ -10,9 +11,9 @@ function Results(props){
     const link = "/detail?tmdbId="+movie.tmdbId;
     return (
       <li key={movie.title}>
-        <a href={link}>
+        <Link to={link}>
           {movie.title}
-        </a>
+        </Link>
       </li>
     );
   });

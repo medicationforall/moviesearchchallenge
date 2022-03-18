@@ -1,5 +1,6 @@
 import React from 'react';
 import tags from '../../../json/tags.json';
+import { Link } from 'react-router-dom';
 
 function Tags(props){
   const filterTags = tags.filter(tag=>{
@@ -8,7 +9,7 @@ function Tags(props){
 
   const tagList = filterTags.map(tag=>{
     const link = "results/?tag[]=" + encodeURI(tag.name);
-    return (<li key={tag.name}><a href={link} title={tag.count}>{tag.name}</a></li>);
+    return (<li key={tag.name}><Link to={link} title={tag.count}>{tag.name}</Link></li>);
   });
 
   return (
