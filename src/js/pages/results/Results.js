@@ -35,18 +35,27 @@ function Results(props){
 function _resolveMovies(movies){
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const genre = urlParams.get('genre')
-  const tags = urlParams.getAll('tag[]')
-  const inTags = urlParams.getAll('intag[]')
-  const exTags = urlParams.getAll('extag[]')
-  const search = urlParams.get('search')
+  const genre = urlParams.get('genre');
+  const tags = urlParams.getAll('tag[]');
+  const inTags = urlParams.getAll('intag[]');
+  const exTags = urlParams.getAll('extag[]');
+  const search = urlParams.get('search');
+  const ratingEQ = parseFloat(urlParams.get('rating'));
+  const ratingLT = parseFloat(urlParams.get('ratinglt'));
+  const ratingGT = parseFloat(urlParams.get('ratinggt'));
 
   let movieTitle = Object.keys(movies);
   movieTitle = movieTitle.sort();
   movieTitle = _filterByGenre(genre, movieTitle);
+
   movieTitle = _filterByInclusiveTags(inTags, movieTitle);
   movieTitle = _filterByRequiredTags(tags, movieTitle);
   movieTitle = _filterByExcludeTags(exTags, movieTitle);
+
+  movieTitle = _filterByRatingGT(ratingGT, movieTitle);
+  movieTitle = _filterByRatingLT(ratingLT, movieTitle);
+  movieTitle = _filterByRating(ratingEQ, movieTitle);
+
   movieTitle = _filterTitleBySearch(search, movieTitle);
 
   const movieArray = movieTitle.map(title=>{
@@ -136,6 +145,39 @@ function _filterByExcludeTags(exTags, movieTitle){
       }else{
         return true;
       }
+    });
+  }
+  return movieTitle;
+}
+
+function _filterByRatingGT(ratingGT, movieTitle){
+  if(ratingGT){
+    console.log('_filterByRatingGT', ratingGT);
+    movieTitle = movieTitle.filter(title=>{
+      const movie = movies[title];
+      return parseFloat(movie.rating) > ratingGT;
+    });
+  }
+  return movieTitle;
+}
+
+function _filterByRatingLT(ratingLT, movieTitle){
+  if(ratingLT){
+    console.log('_filterByRatingLT', ratingLT);
+    movieTitle = movieTitle.filter(title=>{
+      const movie = movies[title];
+      return parseFloat(movie.rating) < ratingLT;
+    });
+  }
+  return movieTitle;
+}
+
+function _filterByRating(ratingEQ, movieTitle){
+  if(ratingEQ){
+    console.log('_filterByRating', ratingEQ);
+    movieTitle = movieTitle.filter(title=>{
+      const movie = movies[title];
+      return parseFloat(movie.rating) === ratingEQ;
     });
   }
   return movieTitle;
