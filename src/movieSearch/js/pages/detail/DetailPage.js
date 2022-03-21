@@ -30,7 +30,7 @@ function _renderError(errorMessage){
     <div className="detail page">
       <Header />
       <div className="contentWrapper">
-        <div className="content">
+        <div className="content error">
           {errorMessage}
         </div>
       </div>

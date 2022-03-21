@@ -7,7 +7,6 @@ function SearchBar(props){
   const navigate = useNavigate();
   return (
     <section id="searchBar">
-      <h2>Search</h2>
       <div className="bar">
       <input
         type="text"
