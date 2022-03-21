@@ -73,7 +73,7 @@ function FilterPrompt(props){
         "mode":baseMode
       });
     }
-  }, [props.display, _getFilterValues]);
+  }, [props, props.display, _getFilterValues]);
 
   if(props.columnDef){
     const columnDef = props.columnDef;
@@ -411,8 +411,8 @@ function _confirmClick(props, filter){
 
 /**
  * Resolve values from props to set filter
- * @param {*} props 
- * @returns 
+ * @param {*} props
+ * @returns
  */
 function _getFilterValues(props) {
   const columnDef = props.columnDef;
