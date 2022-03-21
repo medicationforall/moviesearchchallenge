@@ -15,7 +15,6 @@ function Search(props){
         <a href="#searchBar">Search</a>
         <a href="#genres">Genres</a>
         <a href="#tags">Tags</a>
-        <a href="#rating">Rating</a>
         <Link to="/about">About</Link>
       </Header>
       <div className="contentWrapper">
@@ -23,7 +22,6 @@ function Search(props){
           <SearchBar />
           <Genres />
           <Tags />
-          <Rating />
         </div>
       </div>
     </div>
