@@ -1,0 +1,27 @@
+.percentBarComponent{
+  position:relative;
+  margin:10px;
+  border:1px solid var(--sub-border, #c0c0c0);
+}
+
+.percentBarComponent .barContent{
+  display:grid;
+  grid-template-columns: 60px 1fr 60px
+}
+
+.percentBarComponent .percentBar{
+  height:20px;
+  min-width:100px;
+  background: linear-gradient(to right, #ffc200 0%, #86ce21 50%, #7db9e8 87%);
+  position:relative;
+}
+
+.percentBarComponent .percentBar .progress{
+  height:100%;
+  width:100%;
+  background: var(--body-background-color, #fff);
+  position:absolute;
+  right:0px;
+  transition:width 0.5s;
+  border-radius:0px;
+}

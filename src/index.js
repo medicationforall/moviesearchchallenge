@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MovieSearch from './js/MovieSearch';
+import './core/web/css/variables.css';
+import './core/web/css/base.css';
+import MovieSearch from './movieSearch/js/MovieSearch';
 
 ReactDOM.render(
   <React.StrictMode>

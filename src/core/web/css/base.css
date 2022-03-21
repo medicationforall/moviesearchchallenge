@@ -1,0 +1,87 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html{
+  font-family:arial;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+  background-color: var(--button-color);
+  color: var(--button-font-color);
+  cursor: pointer;
+  border: none;
+  font-size: 14pt;
+  margin: 0px 5px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+button svg {
+  fill: currentColor;
+  margin-right: 5px;
+}
+
+button svg.search {
+  fill: none;
+  stroke:currentColor;
+}
+
+button.primary {
+  background-color: var(--primary-button-color);
+  color: var(--primary-button-font-color);
+}
+
+button.secondary {
+  background-color: var(--secondary-button-color);
+  color: var(--secondary-button-font-color);
+}
+
+button.link {
+  background-color: transparent;
+  color: var(--link-color, #027aaf);
+}
+
+button.link:hover {
+  text-decoration: underline;
+}
+
+button:hover {
+  filter: brightness(120%);
+  outline: 1px solid var(--button-outline-color, #9e9e9e);
+}
+
+button[disabled] {
+  background-color: var(--disabled-button-color);
+  color: var(--disabled-button-font-color);
+  pointer-events: none;
+}
+
+/* Links */
+a {
+  color: var(--link-color, #027aaf);
+}
+
+a:visited {
+  color: #673ab7;
+  color: var(--link-visited-color, #673ab7);
+}
+
+/* Errors */
+.error {
+  color: red;
+}
+
+/* Forms */
+.content input,
+.content textarea,
+.content select {
+  transition: background-color 0.3s;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-background-color);
+}

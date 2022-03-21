@@ -1,0 +1,22 @@
+[
+  {
+    "value":"year",
+    "label":"Year"
+  },
+  {
+    "value":"month",
+    "label":"Month"
+  },
+  {
+    "value":"week",
+    "label":"Week"
+  },
+  {
+    "value":"day",
+    "label":"Day"
+  },
+  {
+    "value":"upcoming",
+    "label":"Upcoming"
+  }
+]

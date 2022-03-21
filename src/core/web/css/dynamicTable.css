@@ -1,0 +1,92 @@
+.dynamicTable{
+  color:inherit;
+}
+
+.dynamicTable caption{
+  caption-side:top;
+}
+
+.dynamicTable th .thHeader{
+  transition:padding 0.2s;
+  display:grid;
+  grid-template-columns: 25px auto 1fr;
+}
+
+.dynamicTable th .thHeader:last-child {
+    grid-template-columns: 25px auto 50px;
+}
+
+.dynamicTable th.sortable{
+  cursor: pointer;
+}
+
+.dynTablePageScroller{
+  height:100%;
+  overflow: auto;
+  /*border:10px solid orange;*/
+}
+
+/* Set header to stick to the top of the container. */
+.dynTablePageScroller thead tr th {
+  position: sticky;
+  top: 0;
+  background-color: var(--body-background-color, #fff);
+}
+
+.columnViewIcon{
+  position:absolute;
+  right:17px;
+  height:24px;
+  z-index:1;
+  cursor:pointer;
+  fill:currentColor;
+}
+
+.columnViewIcon .eye{
+  fill:var(--body-background-color, #29ABE2);
+}
+
+.columnViewIcon .pupil{
+  fill:var(--body-background-color, #29ABE2);
+}
+
+.columnViewIcon rect.internal{
+  stroke:currentColor;
+}
+
+.columnViewIcon path{
+  fill:currentColor;
+}
+
+.columnViewIcon.set rect.internal{
+  stroke: var(--icon-highlight-color, #29ABE2);
+}
+.columnViewIcon.set path{
+  fill: var(--icon-highlight-color, #29ABE2);
+}
+
+.dynamicTable svg{
+  transition:fill 0.5s;
+  fill: currentColor;
+  vertical-align: top;
+}
+
+.dynamicTable svg.filter.set{
+  fill: var(--icon-highlight-color, #29ABE2);
+}
+
+.dynamicTable tbody tr:nth-child(odd) {
+  background-color: var(--table-odd-row-background, #ececec);
+}
+
+.dynamicTable tbody tr:hover{
+  background-color: var(--table-row-hover, #daecff);
+}
+
+.dynamicTable tbody tr.selected{
+  background-color: var(--table-row-selected, #88FFD1);
+}
+
+.dynamicTable tr.selected:hover{
+  background-color: var(--table-row-selected-hover, #8ac8ff);
+}

@@ -1,0 +1,29 @@
+.message{
+  margin: 0px auto;
+  background-color: var(--message-background, #aaa);
+  color: var(--message-font-color, #000);
+  width: 350px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16pt;
+  position: absolute;
+  left: calc(50% - 175px);
+  z-index: 2;
+  white-space: pre-wrap;
+}
+
+.message img{
+  float:right;
+  cursor:pointer;
+}
+
+.message.error{
+  background-color: var(--error-message-background, #e57373);
+  color:#000;
+}
+
+.message.save{
+  background-color: var(--save-message-background, #a5d6a7);
+  color:#000;
+}

@@ -12,6 +12,9 @@ html, body, #root{
   height:100%;
   font-family:arial;
   font-size:1.5em;
+  background-color: var(--body-background-color, #fff);
+  color: var(--body-font-color, #000);
+  transition: background-color 0.3s;
 }
 
 header{
@@ -20,8 +23,12 @@ header{
 }
 
 header a{
-  color: var(--link-color, #000);
+  color: var(--header-link-color, #000);
   text-decoration:none;
+}
+
+header a:visited{
+  color: var(--header-visited-link-color, #000);
 }
 
 header a:hover{

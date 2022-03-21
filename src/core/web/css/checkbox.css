@@ -1,0 +1,62 @@
+.checkbox.mainLabel {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+/* Hide the default checkbox */
+.checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+/* Creating a custom checkbox */
+.checkbox .customCheckbox {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  height: 18px;
+  width: 18px;
+  border: 2px solid black;
+  border-radius: 4px;
+  transition: background-color 0.5s;
+  background-color: var(--input-background-color);
+}
+
+.checkbox .checkmark {
+  position: absolute;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  z-index: 1;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+.checkbox .checkmark_stem {
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  transition: background-color 0.3s, height 0.4s;
+  background-color: var(--checkbox-tick-color, #28282B);
+  left: 11px;
+  top: 6px;
+}
+
+.checkbox .checkmark_kick {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  transition: background-color 0.3s, width 0.6s, height 0.5s;
+  background-color: var(--checkbox-tick-color, #28282B);
+  left: 8px;
+  top: 15px;
+}
+
+.checkbox.unchecked .checkmark_stem, .checkbox.unchecked .checkmark_kick{
+  background-color: var(--input-background-color);
+  width: 0px;
+  height: 0px;
+}

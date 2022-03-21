@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Search from '../../../../core/web/js/button/Search'
 
 function SearchBar(props){
   const [searchTerm, _setSearchTerm] = useState('');
@@ -21,7 +22,7 @@ function SearchBar(props){
         autoFocus
         >
       </input>
-      <button className="primary" onClick={e=>_searchClick(searchTerm, navigate)}>Search</button>
+      <Search className="primary" onClick={e=>_searchClick(searchTerm, navigate)}>Search</Search>
       </div>
     </section>
   );
@@ -33,7 +34,9 @@ function _onSearchTermChange(e, setSearchTerm){
 }
 
 function _searchClick(searchTerm, navigate){
-  navigate('/results?search=' + encodeURI(searchTerm))
+  if(searchTerm){
+    navigate('/results?search=' + encodeURI(searchTerm));
+  }
 }
 
 export default SearchBar;

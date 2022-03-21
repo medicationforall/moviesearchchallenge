@@ -1,0 +1,137 @@
+:root {
+  /*core header*/
+  --header-background: #2196f3;
+  --header-title-color: #263238;
+  --nav-selected-background: #f3f3f3;
+  --nav-background: transparent;
+  --nav-highlighted-background: rgba(255,255,255,0.5);
+  --mobile-menu-background: #8ED7F7;
+  --subMenu-background: #fafafa;
+  --warning-color: #d84315;
+  --header-link-color: #000000;
+  --header-visited-link-color:#eeeeee;
+
+  /*body*/
+  --body-background-color: #ffffff;
+  --body-font-color:#000000;
+
+  --secondary-background-color: #f1f1f1;
+
+  --sub-header: #f6f5f7;
+  --sub-border: #dddbdd;
+
+  /*form inputs*/
+  --input-border: #bdbdbd;
+  --input-background-color: #ffffff;
+  --switch-inactive-background-color: #cccccc;
+
+  /*Links*/
+  --link-color: #027aaf;
+  --link-visited-color: #673ab7;
+
+  /*buttons*/
+  --button-color: #efefef;
+  --button-font-color: #000000;
+  --button-outline-color: #9e9e9e;
+
+  --primary-button-color: #a3d977;
+  --primary-button-font-color: #000000;
+
+  --secondary-button-color: #6de6ff;
+  --secondary-button-font-color: #000000;
+
+  --disabled-button-color: rgba(0, 0, 0, 0.12);
+  --disabled-button-font-color: rgba(0, 0, 0, 0.26);
+
+  /*prompt dialog*/
+  --prompt-background-color: #29ABE2;
+
+  /*status messages*/
+  --message-background: #aaaaaa;
+  --message-font-color: #000000;
+
+  --save-message-background: #a5d6a7;
+  --error-message-background: #e57373;
+
+  /*tabs*/
+  --tab-background-color: #bdbdbd;
+  --tab-selected-color:  #f1f1f1;
+  --tab-selected-font-color: currentColor;
+
+  /*table*/
+  --table-odd-row-background: #ececec;
+  --table-row-hover: #daecff;
+  --table-row-selected: #88FFD1;
+  --table-row-selected-hover: #8ac8ff;
+
+
+  /*icon highlight state*/
+  --icon-highlight-color: #29ABE2;
+
+  /*checkbox*/
+  --selected-checkbox: #bbe4f2;
+  --checkbox-tick-color: #28282B;
+}
+
+.dark {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*core header*/
+    --header-background: #2189ab;
+    --nav-selected-background: #a8a8a8;
+    --nav-highlighted-background: rgba(255,255,255,0.3);
+    --mobile-menu-background: #177eab;
+    --subMenu-background: #00a2c7;
+    --warning-color: orange;
+
+    /*body*/
+    --body-background-color: #212121;
+    --body-font-color: #abb2bf;
+
+    --secondary-background-color: #4d4d4d;
+
+    --sub-header: #4f4a4f;
+    --sub-border: #4f4a4f;
+
+    /*Links*/
+    --link-color: #027aaf;
+    --link-visited-color: #8b64ce;
+
+    /*form inputs*/
+    --input-border: #383838;
+    --input-background-color: #b3b3b3;
+    --switch-inactive-background-color:#b3b3b3;
+
+    /*buttons*/
+    --button-color: #4d4d4d;
+    --button-font-color: #a8a8a8;
+    --button-outline-color: #3675b0;
+    --primary-button-color: #487722;
+    --secondary-button-color:#007f99;
+
+    /*prompt dialog*/
+    --prompt-background-color: #2e2e2e;
+
+    /*status messages*/
+    --message-background: #aaaaaa;
+    --message-font-color: #000000;
+    --save-message-background: #408c43;
+    --error-message-background: #b12020;
+
+    /*tabs*/
+    --tab-background-color: #4d4d4d;
+    --tab-selected-color: #bdbdbd;
+    --tab-selected-font-color: #000000;
+
+    /*table*/
+    --table-odd-row-background: #2e2e2e;
+    --table-row-hover: #004a99;
+    --table-row-selected: #007548;
+    --table-row-selected-hover: #0f8fff;
+
+      /*checkbox*/
+    --selected-checkbox: #0f8fff;
+  }
+}

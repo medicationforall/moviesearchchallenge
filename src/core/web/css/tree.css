@@ -1,0 +1,38 @@
+.tree .arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #666;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 9px;
+    transition: transform 0.5s, border-color 0.5s;
+    transform-origin: 8px 9px;
+}
+
+.tree .arrow.open {
+    border-left: 15px solid #4caf50;
+    transform: rotate(90deg);
+}
+
+.tree .arrow.open.root{
+  border-left: 15px solid #666;
+}
+
+.tree .branch{
+  height:35px;
+}
+
+.tree ul{
+  list-style:none;
+}
+
+.tree ul ul{
+  overflow: hidden;
+  transition:height 0.3s;
+}
+
+.tree ul.closed{
+  max-height:0px;
+}

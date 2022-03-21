@@ -1,0 +1,136 @@
+/*Menu*/
+.menu{
+  height:38px;
+  z-index: 3;
+  transition: background-color 0.5s;
+  margin-top: 6px;
+}
+
+.menu .closeArrow{
+  display:none;
+  cursor: pointer;
+}
+
+.menu ul{
+  margin:0px;
+  padding:0px;
+  list-style:none;
+}
+
+.menu ul li{
+  display:inline-block;
+}
+
+.menu ul button, .menu ul a, .menu ul span.selectedPage{
+  text-decoration: none;
+  padding: 7px 10px;
+  display: block;
+  font-size: 12pt;
+  color: #000;
+  background-color: var(--nav-background, transparent);
+  transition: background-color 0.5s;
+  border: 0px;
+}
+
+.menu ul button, .menu ul a{
+  cursor: pointer;
+}
+
+.menu ul span.selectedPage{
+  background-color: var(--nav-selected-background);
+  transition:color 0.5s;
+}
+
+.menu ul em{
+  cursor:pointer;
+}
+
+.menu ul em .arrow {
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 8px solid #666;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 9px;
+    transition: transform 0.5s, border-color 0.5s;
+    transform-origin: 8px 9px;
+    transform: rotate(90deg);
+}
+
+.menu ul button:hover, .menu ul a:hover{
+  text-decoration:underline;
+  background-color: var(--nav-highlighted-background);
+}
+
+.menu .subMenu{
+  border:1px solid #999;
+  background-color: var(--subMenu-background, #fafafa);
+  position:absolute;
+  min-width:100px;
+  transform: scaleY(0);
+  transition:transform 0.5s;
+}
+
+.menu .subMenu.open{
+  transform: scaleY(1);
+}
+
+.menu .subMenu li{
+  display:block;
+}
+
+.menu ul li:hover .subMenu{
+  transform: scaleY(1);
+}
+
+
+
+@media screen and (max-width: 750px) {
+  /*menu*/
+  .menu{
+    height:calc(100% - 86px);
+    margin-top: 0px;
+    background-color: var(--mobile-menu-background);
+    position:fixed;
+    right:0px;
+    top: 86px;
+    transition:width 0.3s, background-color 0.3s;
+  }
+
+  .menu .closeArrow{
+    display:block;
+    margin-left:20px;
+  }
+
+  .menu ul li{
+    display:inline;
+    text-align:center;
+  }
+
+  .menu ul button, .fam .menu ul a, .fam .menu ul span.selectedPage{
+    font-size:18pt;
+  }
+
+  .menu.closed{
+    width:0px;
+  }
+
+  .menu.open{
+    width:75%;
+  }
+
+  .menu ul em{
+    margin-left:10px;
+  }
+
+  .menu .subMenu{
+    border:1px solid #999;
+    background-color:transparent;
+    position:relative;
+    min-width:auto;
+    transform: scaleY(1);
+    margin:0px 10px;
+  }
+}
