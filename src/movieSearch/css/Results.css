@@ -1,0 +1,8 @@
+.results.page .tags, .results.page .genres{
+  max-width:400px;
+}
+
+.results.page .tags a, .results.page .genres a{
+  margin-right: 5px;
+  display: inline-block;
+}

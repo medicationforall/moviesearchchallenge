@@ -5,6 +5,7 @@ import resultTabs from '../../../json/resultTabs.json';
 import Tabs from '../../../../core/web/js/tab/Tabs';
 import List from './List';
 import Table from './Table';
+import '../../../css/Results.css'
 
 function Results(props){
   const [selectedTab, _setSelectedTab] = useState('list');
