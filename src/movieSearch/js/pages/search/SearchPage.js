@@ -6,7 +6,6 @@ import {Link} from "react-router-dom";
 import SearchBar from './SearchBar';
 import Genres from './Genres';
 import Tags from './Tags';
-import Rating from './Rating';
 
 function Search(props){
   return (
