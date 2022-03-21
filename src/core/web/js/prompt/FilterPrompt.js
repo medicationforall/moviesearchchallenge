@@ -57,7 +57,7 @@ function FilterPrompt(props){
         "mode":baseMode
       });
     }
-  }, [props.columnDef, props.filter, textInput, setFilter, setReset, filter, _getFilterValues]);
+  }, [props, props.columnDef, props.filter, textInput, setFilter, setReset, filter]);
 
   useEffect(() => {
     // When using saved formats, the value can update outside of this component while its closed
@@ -73,7 +73,7 @@ function FilterPrompt(props){
         "mode":baseMode
       });
     }
-  }, [props, props.display, _getFilterValues]);
+  }, [props, props.display]);
 
   if(props.columnDef){
     const columnDef = props.columnDef;
