@@ -1,0 +1,10 @@
+[
+  {
+    "id":"list",
+    "label":"List"
+  },
+  {
+    "id":"table",
+    "label":"Table"
+  }
+]

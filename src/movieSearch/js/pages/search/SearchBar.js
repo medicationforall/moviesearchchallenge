@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Search from '../../../../core/web/js/button/Search'
+import Search from '../../../../core/web/js/button/Search';
 
 function SearchBar(props){
   const [searchTerm, _setSearchTerm] = useState('');

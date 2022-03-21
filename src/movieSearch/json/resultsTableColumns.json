@@ -1,0 +1,35 @@
+[
+  {
+    "id": "movieId",
+    "label": "Movie ID",
+    "type": "string",
+    "view":false,
+    "primary":true
+  },
+  {
+    "id": "title",
+    "label": "Title",
+    "type": "string"
+  },
+  {
+    "id": "rating",
+    "label": "Rating",
+    "type": "float"
+  },
+  {
+    "id": "ratingCount",
+    "label": "Rating Count",
+    "view":false,
+    "type": "int"
+  },
+  {
+    "id": "tags",
+    "label": "Tags",
+    "type": "string"
+  },
+  {
+    "id": "genres",
+    "label": "Genres",
+    "type": "string"
+  }
+]

@@ -1,31 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../Header'
 import movies from '../../../json/movies.json';
-import { Link } from 'react-router-dom';
+import resultTabs from '../../../json/resultTabs.json';
+import Tabs from '../../../../core/web/js/tab/Tabs';
+import List from './List';
+import Table from './Table';
 
 function Results(props){
+  const [selectedTab, _setSelectedTab] = useState('list');
+  const tabMap = {'list':List, 'table': Table};
+  const ResultContent = tabMap[selectedTab];
   let movieResults = _resolveMovies(movies);
-  //movieResults = movieResults.slice(0,100);
 
-  const moviesList = movieResults.map(movie=>{
-    const link = "/detail?tmdbId="+movie.tmdbId;
-    return (
-      <li key={movie.title}>
-        <Link to={link}>
-          {movie.title}
-        </Link>
-      </li>
-    );
-  });
   return (
     <div className="results page">
       <Header />
       <div className="contentWrapper">
         <div className="content">
           Results
-          <ul>
-            {moviesList}
-          </ul>
+          <Tabs
+            selected={selectedTab}
+            list={resultTabs}
+            clickHandler={tab=>_setSelectedTab(tab)}
+          />
+          <ResultContent movies={movieResults} />
         </div>
       </div>
     </div>
